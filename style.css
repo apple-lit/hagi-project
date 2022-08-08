@@ -2,20 +2,39 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'YuGothic', 'Yu Gothic', '游ゴシック', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  /* font-family: 'shippori', serif, 'YuGothic', 'Yu Gothic', '游ゴシック', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; */
   font-size: 62.5%;
   overscroll-behavior: none;
 }
 
-@font-face{
+body {
+    animation: fadeIn .4s ease-in 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@font-face {
   font-family: 'tappitsuB';
   src: url('fonts/tappitsuB.ttf');
 }
 
 @font-face {
-  font-family:'aoyagi' ;
+  font-family: 'aoyagi';
   src: url('fonts/aoyagireisyosimo_otf_2_01.otf');
 }
+
+@font-face {
+  font-family: 'shippori';
+  src: url('fonts/shippori.ttf');
+}
+
 
 #fv {
   width: 100vw;
@@ -30,39 +49,51 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-direction: column;
 }
 
-#concept{
-  height:50vh;
+#concept {
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #A5DEE4;
-  color:#268785;
+  color: #268785;
 }
 
 
 .title {
-  position: absolute;
+  position: fixed;
   top: 30px;
   left: 30px;
   width: 20%;
   min-width: 200px;
   height: 80px;
-  background-color: rgb(183, 132, 132);
+  /* background-color: rgb(183, 132, 132); */
+  background-image: url(img/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-#fv p{
-  color:#fff;
-  font-size: 18rem;
-  font-family: 'tappitsuB';
-  writing-mode: vertical-rl;
-  transform: rotate(-5deg);
+#fv p {
+  color: #fff;
+  font-size: 7rem;
+  font-family: 'shippori';
+  /* writing-mode: vertical-rl; */
+  /* transform: rotate(-5deg); */
 }
 
-#fv p span{
+.subtitle {
+  color: #fff;
+  font-size: 3rem !important;
+  font-family: serif !important;
+  margin-top: 30px;
+}
+
+#fv p span {
   font-size: 18rem;
-  font-family: 'tappitsuB';
+  font-family: 'shippori';
   display: inline-block;
   writing-mode: vertical-rl;
   transform: rotate(20deg);
@@ -76,10 +107,18 @@
 
 #teams {
   width: 100vw;
-  color:#fff;
-  background-color: #91B493;
-  padding:50px 0;
+  color: #1e361f;
+  /* background-color: #91B493; */
+  /* background: linear-gradient( 45deg,#1e361f, #83b084); */
+  background-image: url(img/teams-back.jpg);
+  background-size: cover;
+  /* background-color: rgb(225, 225, 225); */
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
+
 
 .team-wrapper {
   width: 100%;
@@ -89,8 +128,8 @@
   flex-wrap: wrap;
 }
 
-.team-wrapper a{
-  display:block;
+.team-wrapper a {
+  display: block;
   text-decoration: none;
 
 }
@@ -99,15 +138,19 @@
   width: 25vw;
   height: 300px;
   /* background-color: #fc9797; */
-  border:1px solid #fff;
+  border: 8px solid #04290b;
   margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4rem;
-  color:#fff;
-  font-weight: 600;
-    font-family: 'tappitsuB';
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.681);
+  /* font-weight: 600; */
+  /* font-family: 'shippori'; */
+  font-family: "Sawarabi Mincho";
+  background-size: cover;
+  background-color: rgba(33, 33, 33, 0.845);
+  background-blend-mode: multiply;
 
 }
 
@@ -115,17 +158,46 @@
 #teams h1 {
   font-size: 5rem;
   text-align: center;
-  margin: 30px 0;
-   font-family: 'tappitsuB';
+  font-family: 'shippori';
+  display: inline-block;
+  margin: 30px auto;
+  border-bottom:2px solid #1e361f;
 }
 
-.teambox:hover{
-  transform: rotate(-2deg);
+.teambox:hover {
+  /* transform: rotate(-2deg); */
+  background-color: rgba(255, 255, 255, 0);
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.256);
 }
 
 
-footer{
+footer {
   text-align: center;
   background-color: rgb(27, 17, 0);
-  color:#fff;
+  color: #fff;
+}
+
+.teama {
+  background-image: url(img/shugo_sample.JPG);
+}
+
+.teamb {
+  background-image: url(img/shugo_sample.JPG);
+}
+
+.teamc {
+  background-image: url(img/shugo_sample.JPG);
+}
+
+.teamd {
+  background-image: url(img/shugo_sample.JPG);
+}
+
+.teame {
+  background-image: url(img/shugo_sample.JPG);
+}
+
+.teamf {
+  background-image: url(img/shugo_sample.JPG);
 }

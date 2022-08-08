@@ -4,13 +4,44 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'YuGothic', 'Yu Gothic', '游ゴシック', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-family: 'shippori', serif, 'YuGothic', 'Yu Gothic', '游ゴシック', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   font-size: 62.5%;
   overscroll-behavior: none;
 }
 
-html{
-    background-color: #f5f5f5;
+html {
+  background-color: #f5f5f5;
+  background-image: url(img/teams-back.jpg);
+  background-size: cover;
+}
+
+body {
+  animation: fadeIn .4s ease-in 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@font-face {
+  font-family: 'tappitsuB';
+  src: url('fonts/tappitsuB.ttf');
+}
+
+@font-face {
+  font-family: 'aoyagi';
+  src: url('fonts/aoyagireisyosimo_otf_2_01.otf');
+}
+
+@font-face {
+  font-family: 'shippori';
+  src: url('fonts/shippori.ttf');
 }
 
 /* #logo{
@@ -19,80 +50,114 @@ html{
   overflow: hidden;
 } */
 
-.logo{
-  width:20%;
+.logo {
+  width: 20%;
   min-width: 200px;
-  height:80px;
-  /* position:absolute;
+  height: 80px;
+   /* position:absolute; */
   top:30px;
-  left:30px; */
-  margin-left: 30px;
-  margin-top: 30px;
-  background-color: rgb(250, 157, 157);
+  left:30px;
+  /* margin-left: 30px; */
+  /* margin-top: 30px; */
+  /* background-color: rgb(250, 157, 157); */
+  background-image: url(img/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position:fixed;
 }
 
-#team{
-  margin: 0 auto;
-  width:90vw;
+#team {
+  margin: 0px auto;
+  width: 90vw;
   overflow: hidden;
-  padding:30px;
+  padding: 0 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+
 }
 
-#team a{
+.team-name{
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top:100px;
+}
+
+#team a {
   text-decoration: none;
   display: block;
-  width:40%;
+  width: 40%;
   margin: 20px 0;
-  color:#252525;
+  color: #252525;
   font-size: 6rem;
+  padding: 30px;
 }
 
-.individual-wrapper{
-  width:100%;
-  height:300px;
+#team a:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.individual-wrapper {
+  width: 100%;
+  height: 300px;
   background-color: rgb(194, 243, 131);
   display: flex;
 }
 
-.photo,.capture{
-  height:100%;
+.photo,
+.capture {
+  height: 100%;
 }
 
-.photo{
-  width:60%;
+.photo {
+  width: 60%;
   background-color: rgb(172, 82, 82);
 }
 
-.capture{
-  width:40%;
+.capture {
+  width: 40%;
   background-color: rgb(127, 82, 172);
 }
 
 
-footer{
-  margin-top:30px;
+footer {
+  margin-top: 30px;
   text-align: center;
 }
 
 
 
-.back-button{
+.back-button {
   display: block;
-  width:20%;
-  background-color: rgb(193, 61, 61);
+  width: 20%;
+  /* background-color: rgb(193, 61, 61); */
+  border:#1e361f 2px solid;
   text-align: center;
   margin: 0 auto;
 }
 
-.back{
+.back-button:hover{
+  /* transform: translateY(-5px); */
+  transition: 0.3s;
+  background-color: #1e361f;
+}
+
+.back {
   display: inline-block;
-  width:100%;
+  width: 100%;
   text-decoration: none;
   font-weight: 900;
+  /* color: #fff; */
+  padding: 20px;
+  color:#1e361f;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.back:hover{
   color:#fff;
-  padding:20px;
 }
